@@ -35,6 +35,9 @@ if ( ! function_exists( 'lsc_run_plugin' ) ) {
 	 * @return void
 	 */
 	function lsc_run_plugin() {
+		require_once LSC_PATH . 'src/class-lsc-user-meta.php';
+		lsc\User_Meta::get_instance();
+
 		require_once LSC_PATH . 'src/class-lsc-webhook.php';
 		lsc\Webhook::get_instance();
 	}
